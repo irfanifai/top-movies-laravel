@@ -42,4 +42,9 @@ class User extends Authenticatable
     {
         return $builder->where('email', $email)->where('activation_token', $token);
     }
+
+    public function socialAccount()
+    {
+        return $this->hasMany(SocialAccount::class);
+    }
 }
