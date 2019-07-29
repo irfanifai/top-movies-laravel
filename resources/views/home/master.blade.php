@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{{ config('app.name', 'Top-Movies') }} - Simple Web REST API</title>
+<title>Top-Movies @yield('title')</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -80,29 +80,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 <!-- //nav -->
 
-<!-- banner -->
-	<div id="slidey" style="display:none;">
-		@include('home.partials._banner')
+<!-- content -->
+    <div class="general">
+        @yield('content')
     </div>
-<!-- //banner -->
+<!-- //content -->
 
-<!-- banner-bottom -->
-	<div class="banner-bottom">
-		@include('home.partials._banner-bottom')
-    </div>
-
-<!-- general -->
-	<div class="general">
-		@include('home.partials._general')
-	</div>
-<!-- //general -->
-
-<!-- Latest-tv-series -->
-	{{-- <div class="Latest-tv-series">
-		@include('home.partials._tv-series')
-	</div> --}}
-
-<!-- //Latest-tv-series -->
 
 <!-- footer -->
 	<div class="footer">
