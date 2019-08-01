@@ -1,10 +1,6 @@
 <div class="container">
-
     <div class="w3_agile_banner_bottom_grid">
         <div id="owl-demo" class="owl-carousel owl-theme">
-
-            @foreach($pop['results'] as $pop)
-
             <div class="item">
                 <div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
 
@@ -15,19 +11,12 @@
                     </a>
 
                     <div class="mid-1 agileits_w3layouts_mid_1_home">
-                        <div style="height: 30px !important;" class="w3l-movie-text">
+                        <div class="w3l-movie-text">
                             <h6><a href="single.html">{{$pop["title"]}}</a></h6>
                         </div>
                         <div class="mid-2 agile_mid_2_home">
-                            <?php $date = $pop['release_date']; ?>
+                            <?php $date = $result['release_date']; ?>
                             <p>{{date('Y', strtotime($date))}}</p>
-
-
-                            <?php
-                            $number = $pop['vote_average'];
-
-                            $stars = round( $number * 2, 0, PHP_ROUND_HALF_UP);
-                            ?>
                             <div class="block-stars">
                                 <ul class="w3l-ratings">
                                     <?php
@@ -48,9 +37,6 @@
                     </div>
                 </div>
             </div>
-
-            @endforeach
-
         </div>
     </div>
 </div>

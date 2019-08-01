@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'IndexController@index');
 
 Auth::routes();
 
@@ -25,3 +27,5 @@ Route::post('auth/activate/resend', 'Auth\ActivationResendController@resend');
 
 Route::get('auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
+
+Route::get('/api', 'IndexController@index');
